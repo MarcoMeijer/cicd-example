@@ -6,10 +6,10 @@ from unittest.mock import patch
 
 class TestVec2(unittest.TestCase):
     def test_add(self):
-        a = Vec2(5, 0)
+        a = Vec2(5, 3)
         a.add(Vec2(3, 7))
         self.assertEqual(a.x, 8)
-        self.assertEqual(a.y, 7)
+        self.assertEqual(a.y, 10)
 
     def test_scale(self):
         a = Vec2(5, -2)
