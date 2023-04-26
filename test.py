@@ -34,10 +34,10 @@ class TestPerson(unittest.TestCase):
             mocked_get.return_value.ok = True
             mocked_get.return_value.text = "{ \"age\": 20 }"
 
-            marco = Person("marco")
-            self.assertEqual(marco.name, "marco")
+            marco = Person("marco2")
+            self.assertEqual(marco.name, "marco2")
             self.assertEqual(marco.age, 20)
-            mocked_get.assert_called_with("https://api.agify.io/?name=marco")
+            mocked_get.assert_called_with("https://api.agify.io/?name=marco2")
 
             mocked_get.return_value.ok = False
             polo = Person("polo")
